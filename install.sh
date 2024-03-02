@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Apps to install
-apps=("neofetch" "visual-studio-code-bin" "chromium" "npm" "nodejs" "kitty" "zsh" "oh-my-zsh-git" "zsh-theme-powerlevel10k" "pokemon-colorscripts-git")
+apps=("neofetch" "visual-studio-code-bin" "chromium" "npm" "nodejs" "kitty" "zsh" "oh-my-zsh-git" "zsh-theme-powerlevel10k" "pokemon-colorscripts-git" "eza")
 
 # Function to check if a package is installed
 package_installed() {
