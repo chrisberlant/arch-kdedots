@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Apps to install
-apps=("neofetch" "visual-studio-code-bin" "chromium" "npm" "nodejs" "kitty" "zsh" "oh-my-zsh-git" "zsh-theme-powerlevel10k" "pokemon-colorscripts-git" "eza")
+apps=("neofetch" "visual-studio-code-bin" "chromium" "npm" "nodejs" "kitty" "zsh" "oh-my-zsh-git"  "zsh-theme-powerlevel10k" "pokemon-colorscripts-git" "eza")
 
 # Function to check if a package is installed
 package_installed() {
@@ -26,3 +26,14 @@ cp -r ./fonts ~/.local/share/
 cp -r ./home/. ~/
 cp -r ./config/. ~/.config
 ln -s ~/.config/kitty/themes/Tokyo-Night.conf ~/.config/kitty/theme.conf
+
+echo "Changing default shell to zsh..."
+chsh -s /usr/bin/zsh
+
+echo "Configuring zsh plugins..."
+cd $ZSH_CUSTOM/plugins
+sudo git clone https://github.com/chrissicool/zsh-256color
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
+
+echo "Configuration completed. Please reboot your computer."
