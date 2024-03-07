@@ -31,7 +31,7 @@ echo "Changing default shell to zsh..."
 chsh -s /usr/bin/zsh
 
 echo "Configuring zsh plugins..."
-cd $ZSH_CUSTOM/plugins
+cd /usr/share/oh-my-zsh/custom/plugins
 sudo git clone https://github.com/chrissicool/zsh-256color
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
