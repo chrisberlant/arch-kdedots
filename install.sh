@@ -26,4 +26,14 @@ cp -r ./fonts ~/.local/share/
 cp -r ./home/. ~/
 cp -r ./config/. ~/.config
 ln -s ~/.config/kitty/themes/Tokyo-Night.conf ~/.config/kitty/theme.conf
-echo "Configuration finished."
+
+echo "Changing default shell to zsh..."
+chsh -s /usr/bin/zsh
+
+echo "Configuring zsh plugins..."
+cd /usr/share/oh-my-zsh/custom/plugins
+sudo git clone https://github.com/chrissicool/zsh-256color
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
+
+echo "Configuration completed. Please reboot your computer."
