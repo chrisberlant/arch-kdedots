@@ -82,9 +82,4 @@ alias ssh='kitten ssh'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Display pokemon when not in visual studio code, only gens 1 et 2
-if [ "$TERM_PROGRAM" != "vscode" ]; then
-	pokemon-colorscripts --no-title -r 1,2
-fi
-
 PATH=~/.console-ninja/.bin:$PATH
