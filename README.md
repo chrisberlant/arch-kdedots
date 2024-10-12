@@ -1,28 +1,11 @@
 # arch-kdedots
 
 Dots for KDE Plasma on Arch Linux
+Install the necessary tools for developing
 
 ## Installation
 
-After an Arch install (or EndeavourOs)
-
-### You need to have yay and git installed (included with EOS)
-
-```shell
-git clone https://aur.archlinux.org/yay.git yay
-```
-
-```shell
-cd yay
-```
-
-```shell
-makepkg -si
-```
-
-```shell
-pacman -Sy git
-```
+After an Arch install (or EndeavourOs/CachyOs)
 
 ### Clone the repository
 
