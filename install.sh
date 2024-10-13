@@ -20,7 +20,7 @@ fi
 if ! package_installed 'yay'; then
     echo "Installing yay from AUR..."
     sudo pacman -S --needed --noconfirm base-devel || { echo "Failed to install base-devel."; }
-    git clone https://aur.archlinux.org/yay.git || { echo "Failed to clone yay."; }
+    git clone https://aur.archlinux.org/yay.git || { echo "Failed to clone yay."; exit 1; }
     cd yay && makepkg -si --noconfirm || { echo "Failed to build yay."; }
     cd .. && rm -rf yay || { echo "Failed to clean up yay directory."; }
     echo "Yay installation completed."
@@ -40,9 +40,9 @@ done
 
 # Copy config files
 echo "Creating config files..."
-cp -ri ./fonts ~/.local/share/ || { echo "Failed to copy fonts."; }
-cp -ri ./home/. ~/ || { echo "Failed to copy home files."; }
-cp -ri ./config/. ~/.config || { echo "Failed to copy config files."; }
+cp -r ./fonts ~/.local/share/ || { echo "Failed to copy fonts."; }
+cp -r ./home/. ~/ || { echo "Failed to copy home files."; }
+cp -r ./config/. ~/.config || { echo "Failed to copy config files."; }
 
 # Ensure kitty theme directory exists before linking
 if [[ -d ~/.config/kitty/themes ]]; then
